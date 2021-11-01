@@ -1,0 +1,273 @@
+/*------------------------------
+--------- common styles --------
+----------------------------- */
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+.section-seperation-bar {
+    width: 100%;
+    height: 15px;
+    margin: 0px;
+}
+
+img{
+    display: block;
+}
+
+/*------------------------------
+----- header section styles ----
+----------------------------- */
+
+nav {
+    background-image: url("images/topnavbg.jpg");
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    text-align: right;
+    padding: 5px 40px; 
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#nav-list li{
+    display: inline;
+    border-right: 3px solid white;    
+}
+
+#nav-list li:last-child {
+    border-right: none;
+  }
+
+nav a, a:focus, a:active {
+    text-decoration: none;
+    color: white;
+    padding: 0px 30px;
+}
+
+nav a:hover {
+    color:yellowgreen;
+}
+
+
+#banner-img {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    /* border-bottom: 7px solid #2fb1b2; */
+}
+
+
+/*------------------------------
+----- main section styles ------
+----------------------------- */
+
+main {
+    margin: 0px;
+    /* border-top: 7px solid #80b9fe; */
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+/* left nav styles */
+
+#left {
+    /* max-width: 250px; */
+    background-image: url("images/leftnav.jpg");
+    background-size: contain;
+    padding: 30px 10px;
+    color: white;
+}
+
+
+#left-list li {
+    font-size: 1.17em;
+    font-weight: bold;
+    width: 90%;
+    margin: 15px auto;
+    padding: 2px 0px;
+    text-align: center;
+    background-image: url("images/libg.jpg");
+    background-size: 100%;
+}
+
+.list-item h3 {
+    padding: 3px;
+}
+
+#left-down {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+#left-img {
+    width: 100%;
+    max-width: 250px;
+}
+
+/* right nav styles */
+#right {
+    padding: 5px 20px;
+    background-image: url("images/leftnav.jpg");
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+}
+
+#right img {
+    max-width: 250px;
+    width: 100%;
+}
+
+/* center styles */
+
+#center {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#welcome {
+    width: 50%;
+    background-image: url("images/centre-bar.gif");
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+#welcome h2 {
+    font-size: 22px;
+    text-align: center;
+    margin: 0px;
+    /* padding: 3px 0px; */
+}
+
+.center-ad {
+    width: 95%;
+    max-width: 900px;
+}
+
+#center p {
+    margin: 50px;
+    text-align: justify;
+    text-align-last: center;
+}
+
+/*------------------------------
+----- footer section styles ----
+----------------------------- */
+
+footer {
+    background-color:black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    color: white;
+    font-size: 14px;
+}
+
+footer a, a:focus, a:active {
+    color: white;
+    text-decoration: none;
+    padding: 0 7px;
+    border-right: 2px solid white;  
+}
+
+footer a:last-child {
+    border-right: none;
+  }
+
+footer a:hover {
+    color:yellowgreen;
+}
+
+footer p{
+    margin: 5px auto;
+    text-align: justify;
+}
+
+
+
+/*------------------------------
+ --------- Media Queries ------- 
+ -----------------------------*/
+
+ /* for medium screen */
+ @media only screen and (max-width:1024px){
+    nav {
+        padding: 5px 20px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    nav a {
+        padding: 0px 15px;
+    }
+
+    #welcome {
+        width: 75%;
+    }
+    
+    #welcome h2 {
+        font-size: 18px;
+    }
+    
+    
+ }
+ 
+ /* for small/mobile screen */
+ @media only screen and (max-width:576px){
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    #welcome {
+        width: 90%;
+    }
+    #right {
+        max-height: 400px;
+    }
+
+    #right img {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    #left {
+        padding: 10px 10px;
+        color: white;
+    }
+    
+    
+    #left-list li {
+        font-size: 1em;
+        margin: 10px auto;
+        padding: 2px 0px;
+        
+    }
+    #left-down {
+        width: 60%;
+        margin-top: 30px;
+    }
+
+}
